@@ -1,3 +1,7 @@
+using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using BusinessLogic.Services;
 using Data;
 using Data.Contracts;
 using Data.UnitOfWork;
@@ -16,6 +20,33 @@ namespace BusinessLogic.IoC
         {
             AddUnitOfWork (services, configuration);
             ConfigureCors (services);
+            AddServices (services);
+        }
+
+        public static void AddServices(IServiceCollection services)
+        {
+            // We use some features that come with ASPNet to map our service using Namespace attributes.
+            // Service type (Well loop through this object)
+            var serviceType = typeof (BookService);
+            var types =
+                (
+                from t in serviceType.GetTypeInfo().Assembly.GetTypes()
+                where
+                t.Namespace == serviceType.Namespace && // namespace BusinessLogic.Services
+                t.GetTypeInfo().IsClass && // Returns all concrete class under the namespace.
+                t
+                    .GetTypeInfo()
+                    .GetCustomAttribute<CompilerGeneratedAttribute>() ==
+                null
+                select t
+                ).ToArray();
+
+            // Get interfaces for these services
+            foreach (var type in types)
+            {
+                var iServiceType = type.GetTypeInfo().GetInterfaces().First();
+                services.AddTransient (iServiceType, type);
+            }
         }
 
         private static void AddUnitOfWork(

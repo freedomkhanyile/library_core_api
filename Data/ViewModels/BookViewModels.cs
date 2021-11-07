@@ -47,6 +47,8 @@ namespace Data.ViewModels
                 ErrorMessage = "Year must be greater than 1700's")
         ]
         public string Year { get; set; }
+
+        public string CreatedBy { get; set; }
     }
 
     public class UpdateBookViewModel
