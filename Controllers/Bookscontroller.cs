@@ -1,3 +1,6 @@
+using System.Threading.Tasks;
+using BusinessLogic.Contracts;
+using Data.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -14,15 +17,30 @@ namespace Controllers
 
         private readonly ILogger<Bookscontroller> _logger;
 
-        public Bookscontroller(ILogger<Bookscontroller> logger)
+        private readonly IBookService _bookService;
+
+        public Bookscontroller(
+            ILogger<Bookscontroller> logger,
+            IBookService bookService
+        )
         {
             _logger = logger;
+            _bookService = bookService;
         }
 
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(Books);
+            return Ok(_bookService.GetBooks());
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create(CreateBookViewModel model)
+        {
+            var book = await _bookService.CreateBook(model);
+            _logger
+                .LogInformation($"Book with name :{book.BookName} was created successfully");
+            return Ok(book);
         }
     }
 }
