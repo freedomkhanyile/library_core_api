@@ -9,9 +9,9 @@ namespace BusinessLogic.Contracts
 
         BookListViewModel GetBooks();
 
-        Task<BookViewModel> CreateBook(CreateBookViewModel model);
+        Task<BookViewModel> CreateBookAsync(CreateBookViewModel model);
 
-        Task<BookViewModel> UpdateBook(int id, UpdateBookViewModel model);
+        Task<BookViewModel> UpdateBookAsync(int id, UpdateBookViewModel model);
 
         Task<bool> DeleteBookAsync(int id);
     }

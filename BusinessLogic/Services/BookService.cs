@@ -17,7 +17,7 @@ namespace BusinessLogic.Services
             _uow = uow;
         }
 
-        public async Task<BookViewModel> CreateBook(CreateBookViewModel model)
+        public async Task<BookViewModel> CreateBookAsync(CreateBookViewModel model)
         {
             // transform the model to an entity.
             var book = model.ToEntity();
@@ -36,7 +36,7 @@ namespace BusinessLogic.Services
         {
             // Return the first occurance of the Id and convert to entity to delete.
             var bookToDelete =
-                GetQuery().FirstOrDefault(b => b.BookId == id).ToEntity();
+                GetQuery().FirstOrDefault(b => b.Id == id);
 
             // Throw exception not found.
             if (bookToDelete == null)
@@ -45,7 +45,7 @@ namespace BusinessLogic.Services
             }
 
             // Remove book from our UOW instance
-            _uow.Remove (bookToDelete);
+            _uow.Remove(bookToDelete);
 
             // Persist database effectively.
             await _uow.CommitAsync();
@@ -62,7 +62,7 @@ namespace BusinessLogic.Services
             if (books.Count() > 0)
             {
                 // map fields 
-                bookList.books = books.ToList();
+                bookList.books = books.Select(x => x.ToModel()).ToList();
                 bookList.Count = books.Count();
             }
 
@@ -72,36 +72,35 @@ namespace BusinessLogic.Services
         public BookViewModel GetById(int id)
         {
             // get the first instance of the bookid based on id parameter.
-            var book = GetQuery().FirstOrDefault(b => b.BookId == id);
+            var book = GetQuery().FirstOrDefault(x => x.Id == id);
            
-            return book != null ? book : throw new System.Exception($"Book with id: {id} not found");
+            return book != null ? book.ToModel() : throw new System.Exception($"Book with id: {id} not found");
         }
 
-        public async Task<BookViewModel> UpdateBook(int id, UpdateBookViewModel model)
+        public async Task<BookViewModel> UpdateBookAsync(int id, UpdateBookViewModel model)
         {
             // get the first instance of the bookid based on id parameter.
-            var book = GetQuery().FirstOrDefault(b => b.BookId == id).ToEntity();
+            var book = GetQuery().FirstOrDefault(x => x.Id == id);
             if (book == null)
             {
                 throw new System.Exception($"Book with id: {id} not found");
             }
 
             // Update book fields here.
-            book.BookName = model.BookName;
+             book.BookName = model.BookName;
             book.ISBN = model.ISBN;
             book.Year = model.Year;
-
             await  _uow.CommitAsync();
 
-            return book.ToModel();
+            return GetById(id);
 
         }
 
-        private IQueryable<BookViewModel> GetQuery()
+        private IQueryable<Book> GetQuery()
         {
             var q = _uow.Query<Book>();
             var books = q.ToList();
-            return books.Select(x => x.ToModel()).AsQueryable();
+            return books.AsQueryable();
         }
     }
 }

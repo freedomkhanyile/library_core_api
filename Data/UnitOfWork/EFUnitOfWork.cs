@@ -8,7 +8,7 @@ namespace Data.UnitOfWork
     public class EFUnitOfWork : IUnitOfWork
     {
         private DbContext _context;
-
+    
         public EFUnitOfWork(DbContext context)
         {
             _context = context;
@@ -70,5 +70,6 @@ namespace Data.UnitOfWork
             set.Attach (obj);
             _context.Entry(obj).State = EntityState.Modified;
         }
+
     }
 }

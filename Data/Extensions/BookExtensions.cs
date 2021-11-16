@@ -56,8 +56,10 @@ namespace Data.Extensions
             entityToUpdate.Year = model.Year;
         }
 
-        public static UpdateBookViewModel ToUpdateViewModel(this BookViewModel model) {
-            return new UpdateBookViewModel{
+        public static UpdateBookViewModel
+        ToUpdateViewModel(this BookViewModel model)
+        {
+            return new UpdateBookViewModel {
                 BookId = model.BookId,
                 BookName = model.BookName,
                 ISBN = model.ISBN,
