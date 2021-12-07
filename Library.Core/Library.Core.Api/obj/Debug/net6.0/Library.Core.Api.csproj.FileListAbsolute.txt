@@ -59,4 +59,3 @@ C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Cor
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net6.0\Library.Core.Api.genruntimeconfig.cache
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\Humanizer.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net6.0\Library.Core.Api.csproj.AssemblyReference.cache
