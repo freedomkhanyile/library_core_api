@@ -40,9 +40,11 @@ namespace Library.Core.Api.Controllers
             return Ok(await _mediator.Send(new GetBookByIdQuery { Id = id }));
         }
 
+
         [HttpPost]
         public async Task<IActionResult> PostAsync(CreateBookCommand command)
-        {
+        { 
+            /// Create a Request Model and use Automapper.
             return Ok(await _mediator.Send(command));
         }
 

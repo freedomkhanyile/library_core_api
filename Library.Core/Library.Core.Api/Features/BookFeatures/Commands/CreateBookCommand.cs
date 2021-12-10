@@ -1,5 +1,5 @@
 ﻿using Library.Core.Api.Data.Models;
-using Library.Core.Api.Data.Services.Contracts;
+using Library.Core.Api.Data.UnitOfWork;
 using MediatR;
 
 namespace Library.Core.Api.Features.BookFeatures.Commands
@@ -33,12 +33,11 @@ namespace Library.Core.Api.Features.BookFeatures.Commands
 
         public class CreateBookCommanHandler : IRequestHandler<CreateBookCommand, int>
         {
-            private readonly IBookService _service;
-            public CreateBookCommanHandler(IBookService service)
+            private readonly IUnitOfWork _uow;
+            public CreateBookCommanHandler(IUnitOfWork uow)
             {
-                _service = service;
+                _uow = uow;
             }
-
             public async Task<int> Handle(CreateBookCommand command, CancellationToken cancellationToken)
             {
                 var book = new Book();
@@ -56,7 +55,10 @@ namespace Library.Core.Api.Features.BookFeatures.Commands
                 book.ModifyUserId = command.ModifyUserId;
                 book.StatusId = command.StatusId;
 
-                return await _service.CreateBookAsync(book);
+                await _uow.AddAsync(book);
+                await _uow.CommitAsync();
+
+                return book.Id;
             }
         }
     }

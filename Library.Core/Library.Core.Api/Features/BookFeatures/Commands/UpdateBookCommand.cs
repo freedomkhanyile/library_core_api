@@ -1,9 +1,10 @@
-﻿using Library.Core.Api.Data.Services.Contracts;
+﻿using Library.Core.Api.Data.Models;
+using Library.Core.Api.Data.UnitOfWork;
 using MediatR;
 
 namespace Library.Core.Api.Features.BookFeatures.Commands
 {
-    public class UpdateBookCommand: IRequest<int>
+    public class UpdateBookCommand : IRequest<int>
     {
         public int Id { get; set; }
 
@@ -21,22 +22,23 @@ namespace Library.Core.Api.Features.BookFeatures.Commands
         public decimal OrderCost { get; set; }
 
         public string Publisher { get; set; }
-     
+
         public string ModifyUserId { get; set; }
 
         public int StatusId { get; set; }
 
-        public class UpdateBookCommandHandler: IRequestHandler<UpdateBookCommand, int>
+        public class UpdateBookCommandHandler : IRequestHandler<UpdateBookCommand, int>
         {
-            private readonly IBookService _service;
-            public UpdateBookCommandHandler(IBookService service)
+            private readonly IUnitOfWork _uow;
+            public UpdateBookCommandHandler(IUnitOfWork uow)
             {
-                _service = service;
+                _uow = uow;
             }
 
             public async Task<int> Handle(UpdateBookCommand command, CancellationToken cancellationToken)
             {
-                var bookToBeUpdated = await _service.GetBookByIdAsync(command.Id);
+                var books = await _uow.QueryAsync<Book>();
+                var bookToBeUpdated = books.FirstOrDefault(x => x.Id == command.Id);
                 if (bookToBeUpdated == null) return default;
                 else
                 {
@@ -53,8 +55,10 @@ namespace Library.Core.Api.Features.BookFeatures.Commands
                     bookToBeUpdated.ModifyUserId = command.ModifyUserId;
                     bookToBeUpdated.StatusId = command.StatusId;
 
-                    return await _service.UpdateBookAsync(bookToBeUpdated);
-                    
+                     await _uow.UpdateAsync(bookToBeUpdated);
+                    await _uow.CommitAsync();
+                    return command.Id;
+
                 }
 
             }

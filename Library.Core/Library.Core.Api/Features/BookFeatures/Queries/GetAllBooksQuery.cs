@@ -1,5 +1,5 @@
 ﻿using Library.Core.Api.Data.Models;
-using Library.Core.Api.Data.Services.Contracts;
+using Library.Core.Api.Data.UnitOfWork;
 using MediatR;
 
 namespace Library.Core.Api.Features.BookFeatures.Queries
@@ -8,16 +8,15 @@ namespace Library.Core.Api.Features.BookFeatures.Queries
     {
         public class GetAllBooksQueryHandler : IRequestHandler<GetAllBooksQuery, IEnumerable<Book>>
         {
-            private readonly IBookService _service;
-
-            public GetAllBooksQueryHandler(IBookService service)
+            private readonly IUnitOfWork _uow;
+            public GetAllBooksQueryHandler(IUnitOfWork uow)
             {
-                _service = service;
+                _uow = uow;
             }
 
             public async Task<IEnumerable<Book>> Handle(GetAllBooksQuery request, CancellationToken cancellationToken)
             {
-                var bookList = await _service.GetAllBooksAsync();
+                var bookList = await _uow.QueryAsync<Book>();
                 if(bookList == null) return null;
                 return bookList;
             }

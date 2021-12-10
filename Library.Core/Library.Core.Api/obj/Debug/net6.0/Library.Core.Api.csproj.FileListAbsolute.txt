@@ -6,11 +6,13 @@ C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Cor
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\Library.Core.Api.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\ref\Library.Core.Api.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\Library.Core.Api.pdb
+C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\Humanizer.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\MediatR.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\Microsoft.Identity.Client.dll
@@ -57,5 +59,3 @@ C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Cor
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net6.0\ref\Library.Core.Api.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net6.0\Library.Core.Api.pdb
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net6.0\Library.Core.Api.genruntimeconfig.cache
-C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\Humanizer.dll
-C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll

@@ -1,6 +1,4 @@
 ﻿using Library.Core.Api.Data.Context;
-using Library.Core.Api.Data.Services;
-using Library.Core.Api.Data.Services.Contracts;
 using Library.Core.Api.Data.UnitOfWork;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -15,7 +13,6 @@ namespace Library.Core.Api.Helpers.IoC
         {
             AddDatabase(services, configuration);
             AddUnitOfWork(services);
-            AddServices(services);
             AddMediatR(services);
         }
 
@@ -34,14 +31,10 @@ namespace Library.Core.Api.Helpers.IoC
                 uow => new EFUnitOfWork(uow.GetRequiredService<ApplicationDbContext>()));
         }
 
-        private static void AddServices(IServiceCollection services)
-        {
-            services.AddScoped<IBookService, BookService>();
-        }
 
         private static void AddMediatR(IServiceCollection services)
         {
-            services.AddMediatR(typeof(BookService));
+            services.AddMediatR(typeof(EFUnitOfWork));
         }
     }
 }
