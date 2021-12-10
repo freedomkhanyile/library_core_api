@@ -2,6 +2,10 @@
 using Library.Core.Api.Data.UnitOfWork;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json.Serialization;
+using System;
 
 namespace Library.Core.Api.Helpers.IoC
 {
@@ -14,6 +18,27 @@ namespace Library.Core.Api.Helpers.IoC
             AddDatabase(services, configuration);
             AddUnitOfWork(services);
             AddMediatR(services);
+            AddCors(services);
+            AddJsonSerializer(services);
+        }
+
+        private static void AddJsonSerializer(IServiceCollection services)
+        {
+            services.AddControllersWithViews().AddNewtonsoftJson( _ => 
+            _.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore)
+                .AddNewtonsoftJson(_ => _.SerializerSettings.ContractResolver = new DefaultContractResolver());
+        }
+
+        private static void AddCors(IServiceCollection services)
+        {
+            services.AddCors(c =>
+            {
+                c.AddPolicy("CorsPolicy", _ => _
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+
+            });
         }
 
         private static void AddDatabase(IServiceCollection services, IConfiguration configuration)

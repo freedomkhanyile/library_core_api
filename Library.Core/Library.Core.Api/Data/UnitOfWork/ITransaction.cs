@@ -1,4 +1,6 @@
-﻿namespace Library.Core.Api.Data.UnitOfWork
+﻿using System;
+
+namespace Library.Core.Api.Data.UnitOfWork
 {
     public interface ITransaction: IDisposable
     {

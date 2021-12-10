@@ -1,4 +1,6 @@
-﻿namespace Library.Core.Api.Data.Models
+﻿using System;
+
+namespace Library.Core.Api.Data.Models
 {
     public abstract class AuditEntity
     {
