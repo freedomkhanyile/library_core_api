@@ -4,6 +4,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
 using System;
 
@@ -24,8 +25,8 @@ namespace Library.Core.Api.Helpers.IoC
 
         private static void AddJsonSerializer(IServiceCollection services)
         {
-            services.AddControllersWithViews().AddNewtonsoftJson( _ => 
-            _.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore)
+            services.AddControllersWithViews().AddNewtonsoftJson(_ =>
+           _.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore)
                 .AddNewtonsoftJson(_ => _.SerializerSettings.ContractResolver = new DefaultContractResolver());
         }
 
@@ -43,10 +44,9 @@ namespace Library.Core.Api.Helpers.IoC
 
         private static void AddDatabase(IServiceCollection services, IConfiguration configuration)
         {
-            services.AddDbContext<ApplicationDbContext>(o =>
-            o.UseSqlServer(
-                configuration.GetConnectionString("DefaultConnection"),
-                b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
+            var connectionString = configuration.GetConnectionString("PostgressConnection");
+            services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));
+
         }
 
         private static void AddUnitOfWork(IServiceCollection services)

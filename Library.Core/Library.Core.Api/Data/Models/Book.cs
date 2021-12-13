@@ -4,9 +4,7 @@ namespace Library.Core.Api.Data.Models
 {
     public class Book : AuditEntity
     {
-        [Key]
-        public int Id { get; set; }
-
+    
         [Required]
         public string ISBN { get; set; }
 

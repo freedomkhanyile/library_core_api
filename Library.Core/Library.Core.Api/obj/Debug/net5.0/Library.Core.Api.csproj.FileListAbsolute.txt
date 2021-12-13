@@ -7,6 +7,7 @@ C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Cor
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\Library.Core.Api.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\ref\Library.Core.Api.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\Library.Core.Api.pdb
+C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\EFCore.NamingConventions.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\Humanizer.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\MediatR.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
@@ -28,6 +29,8 @@ C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Cor
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\Microsoft.OpenApi.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
+C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\Npgsql.dll
+C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
@@ -59,3 +62,4 @@ C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Cor
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net5.0\ref\Library.Core.Api.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net5.0\Library.Core.Api.pdb
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net5.0\Library.Core.Api.genruntimeconfig.cache
+C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
