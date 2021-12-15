@@ -57,9 +57,9 @@ C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Cor
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net5.0\Library.Core.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net5.0\scopedcss\bundle\Library.Core.Api.styles.css
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net5.0\staticwebassets\Library.Core.Api.StaticWebAssets.Manifest.cache
-C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net5.0\Library.Core.Api.csproj.CopyComplete
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net5.0\Library.Core.Api.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net5.0\ref\Library.Core.Api.dll
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net5.0\Library.Core.Api.pdb
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net5.0\Library.Core.Api.genruntimeconfig.cache
 C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+C:\Users\freedom.khanyile\source\repos\library_core_api\Library.Core\Library.Core.Api\obj\Debug\net5.0\Library.Core.Api.csproj.CopyComplete
