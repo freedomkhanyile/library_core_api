@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fJF4ljNc4UlMrR+pCaFZlWppi9T8JJQHekgThEAe3/MABqLBQ+5RdcssWEC8wugx7P3padS8AvsxCU2v2iddnQ==",
+  "dgSpecHash": "UmKMHJfQ6DpwCYJbIkILf1NVK89ugyplMAf7YkyR5dC53O3UW5C1FTuL8fcrYhrwnzt09N9x2SFMMU7BrMa/xQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\freedom.khanyile\\source\\repos\\library_core_api\\Library.Core\\Library.Core.Api\\Library.Core.Api.csproj",
   "expectedPackageFiles": [
@@ -112,8 +112,7 @@
     "C:\\Users\\freedom.khanyile\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\freedom.khanyile\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\freedom.khanyile\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\freedom.khanyile\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\freedom.khanyile\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+    "C:\\Users\\freedom.khanyile\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

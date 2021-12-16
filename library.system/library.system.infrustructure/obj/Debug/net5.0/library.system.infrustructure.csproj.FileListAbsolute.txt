@@ -1,0 +1,11 @@
+C:\Users\freedom.khanyile\source\repos\library_core_api\library.system\library.system.infrustructure\bin\Debug\net5.0\library.system.infrustructure.deps.json
+C:\Users\freedom.khanyile\source\repos\library_core_api\library.system\library.system.infrustructure\bin\Debug\net5.0\library.system.infrustructure.dll
+C:\Users\freedom.khanyile\source\repos\library_core_api\library.system\library.system.infrustructure\bin\Debug\net5.0\ref\library.system.infrustructure.dll
+C:\Users\freedom.khanyile\source\repos\library_core_api\library.system\library.system.infrustructure\bin\Debug\net5.0\library.system.infrustructure.pdb
+C:\Users\freedom.khanyile\source\repos\library_core_api\library.system\library.system.infrustructure\obj\Debug\net5.0\library.system.infrustructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\freedom.khanyile\source\repos\library_core_api\library.system\library.system.infrustructure\obj\Debug\net5.0\library.system.infrustructure.AssemblyInfoInputs.cache
+C:\Users\freedom.khanyile\source\repos\library_core_api\library.system\library.system.infrustructure\obj\Debug\net5.0\library.system.infrustructure.AssemblyInfo.cs
+C:\Users\freedom.khanyile\source\repos\library_core_api\library.system\library.system.infrustructure\obj\Debug\net5.0\library.system.infrustructure.csproj.CoreCompileInputs.cache
+C:\Users\freedom.khanyile\source\repos\library_core_api\library.system\library.system.infrustructure\obj\Debug\net5.0\library.system.infrustructure.dll
+C:\Users\freedom.khanyile\source\repos\library_core_api\library.system\library.system.infrustructure\obj\Debug\net5.0\ref\library.system.infrustructure.dll
+C:\Users\freedom.khanyile\source\repos\library_core_api\library.system\library.system.infrustructure\obj\Debug\net5.0\library.system.infrustructure.pdb

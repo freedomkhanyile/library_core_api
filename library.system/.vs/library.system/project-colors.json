@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "af80bdc7-b90c-4b51-93f2-d080fa51c069": {
+      "ProjectGuid": "af80bdc7-b90c-4b51-93f2-d080fa51c069",
+      "DisplayName": "library.system.api",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
